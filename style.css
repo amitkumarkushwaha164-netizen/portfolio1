@@ -165,98 +165,36 @@ footer{
     margin-top: 20px;
 }
 
-
-/* Tablet (max width 768px) */
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    
-    .hero {
-        padding: 30px 15px;
-    }
-    
-    .hero-image {
-        max-width: 150px;
-    }
-    
-    input, textarea {
-        width: 250px;
-    }
-    
-    .btn {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-}
-
-/* Mobile (max width 480px) */
-@media (max-width: 480px) {
-    .navbar {
+/* Mobile view ke liye media query */
+@media screen and (max-width: 768px) {
+    nav {
+        /* Navbar ko flex-direction column kar denge taaki wo stack ho jaye */
+        display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        padding: 10px 0;
     }
-    
-    .navbar a {
-        font-size: 14px;
-    }
-    
-    h1, h2, h3 {
-        font-size: 18px;
-        margin-top: 10px;
-    }
-    
-    .hero {
-        padding: 20px 10px;
-    }
-    
-    .hero-image {
-        max-width: 120px;
-    }
-    
-    p {
-        font-size: 14px;
-    }
-    
-    input, textarea {
+
+    nav ul {
+        /* List items ko vertical karne ke liye */
+        display: flex;
+        flex-direction: column;
         width: 100%;
-        max-width: 280px;
+        text-align: center;
+        padding: 0;
     }
-    
-    .btn {
-        padding: 8px 12px;
-        font-size: 12px;
+
+    nav ul li {
+        /* Har link ke bich thoda gap dene ke liye */
+        margin: 10px 0;
+        list-style: none;
     }
-    
-    button {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-    
-    footer {
-        padding: 15px;
-        font-size: 12px;
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        font-size: 18px;
     }
 }
-
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero {
-        padding: 20px 10px;
-    }
-
-    .hero-image {
-        max-width: 150px;
-    }
-
-    input, textarea {
-        width: 100%;
-    }
+     
 }
